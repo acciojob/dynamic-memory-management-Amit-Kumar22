@@ -1,6 +1,6 @@
 // Complete the js code
 
-const limit = 50; // Heap memory usage limit in MB
+const limit = 70; // Heap memory usage limit in MB
 let elements = []; // Array to hold generated DOM elements
 
 // Function to generate DOM elements
@@ -29,7 +29,7 @@ const updateMemoryUsage = () => {
 	const memoryUsage = (performance.memory.usedJSHeapSize / (1024 * 1024)).toFixed(2); // Convert to MB
             document.getElementById("memory").textContent = memoryUsage + " MB";
 
-            if (memoryUsage > memoryLimit) {
+            if (memoryUsage > limit) {
                 alert("Amit");
             }
 };
