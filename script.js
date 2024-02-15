@@ -8,6 +8,7 @@ const generateElements = () => {
   // complete the function
 	const newElement = document.createElement("div");
             newElement.textContent = "New Element";
+	        // newElement.innerHTML = `Element ${++elementCount}`
             document.body.appendChild(newElement);
             updateMemoryUsage();
 };
@@ -27,7 +28,7 @@ const removeElements = () => {
 const updateMemoryUsage = () => {
   // Complete this function
 	const memoryUsage = (performance.memory.usedJSHeapSize / (1024 * 1024)).toFixed(2); // Convert to MB
-            document.getElementById("memory").textContent = memoryUsage + " MB";
+            document.getElementById("memory").textContent ="Memory usage:" +memoryUsage + " MB";
 
             if (memoryUsage > limit) {
                 alert("memory usage exceed");
